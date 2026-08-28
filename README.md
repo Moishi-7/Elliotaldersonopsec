@@ -1,2 +1,10 @@
-# Elliotaldersonopsec
-Bro Mr robot Elliot alderson pure OPSEC god bro
+# elliotaldersonopsec
+
+## Installation
+
+```bash
+git clone [https://github.com/Moishi-7/elliotaldersonopsec.git](https://github.com/Moishi-7/elliotaldersonopsec.git)
+cd elliotaldersonopsec
+chmod +x install.sh
+./install.sh
+
