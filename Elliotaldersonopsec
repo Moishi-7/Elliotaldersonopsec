@@ -1,24 +1,25 @@
 #!/bin/sh
 
-# opsec logo
+#opsec logo
 if command -v fastfetch >/dev/null 2>&1; then
     fastfetch -l Kali
 fi
 
-# Opens opsec edit
+# tuff edit
+URL="https://youtu.be/TEjNPzf67n8?si=QfV0VSo47nfHv1ff"
 if command -v xdg-open >/dev/null 2>&1; then
-    xdg-open "https://youtu.be/TEjNPzf67n8?si=QfV0VSo47nfHv1ff" >/dev/null 2>&1 &
+    xdg-open "$URL" >/dev/null 2>&1 &
 elif command -v open >/dev/null 2>&1; then
-    open "https://youtu.be/TEjNPzf67n8?si=QfV0VSo47nfHv1ff" &
+    open "$URL" &
 fi
 
-# downloading opsec.iso
+# Download Kali Linux 
 ISO_URL="https://cdimage.kali.org/current/kali-linux-2026.2-installer-amd64.iso"
 if command -v wget >/dev/null 2>&1; then
     wget --show-progress "$ISO_URL" -O kali-linux.iso
 elif command -v curl >/dev/null 2>&1; then
     curl -L --progress-bar "$ISO_URL" -o kali-linux.iso
 else
-    echo "not found, you have no OPSEC bro" >&2
+    echo "Error: Neither wget nor curl found, L opsec bro." >&2
     exit 1
 fi
