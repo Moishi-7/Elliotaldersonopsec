@@ -7,6 +7,3 @@ git clone [https://github.com/Moishi-7/Elliotaldersonopsec.git](https://github.c
 cd Elliotaldersonopsec
 chmod +x Install.sh
 ./Install.sh
-
-
-
